@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --indian-red: ##e94554;
+  --sandy-brown: ##f39655;
+}
+/* Banner */
+
+.banner {
+  position: absolute;
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #efefef; /* Optional: Add background for contrast */
+  border-radius: 10px;
+}
+
+.container {
+  position: absolute;
+  bottom: 0px;
+  width: 90%;
+  height: 80%;
+  background: #efefef; /* White frame */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow */
+  cursor: pointer;
+}
+
+.logo {
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  width: 7%;
+  height: auto;
+  transform: translateX(-50%);
+}
+.clipflip-play {
+  position: absolute;
+  top: 5%;
+  right: 18%;
+  width: 6%;
+  height: auto;
+}
+
+.logo img,
+.clipflip-play img {
+  width: 100%;
+  height: auto;
+}
+.play-btn {
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.play-btn img {
+  max-width: 100%;
+  height: auto;
+}
+.video-player-holder {
+  width: 100%;
+  height: 100%;
+}
+
+.video-player-holder video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures full coverage */
+}
+
+.banner .button {
+  font-size: 13px;
+  color: white;
+  background: linear-gradient(287deg, #e94554, #f39655);
+  text-decoration: none;
+  border-radius: 5px;
+  z-index: 1;
+  right: 10%;
+  margin: auto;
+  bottom: 10px;
+  position: absolute;
+  padding: 7px 20px;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1px;
+  background-size: 200% 200%;
+  transition: background-position 0.5s ease-in-out, transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+.banner .button:hover {
+  background-position: right center;
+}
+/* Modal Overlay */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal Content Box (300x250px) */
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  max-width: 1080px;
+  box-shadow: 0px 0px 10px #000;
+  border-radius: 8px;
+  overflow: hidden; /* Ensures the iframe stays inside */
+  background-color: #efefef;
+}
+
+/* Close Button (Top-Right Outside) */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* Hover effect for close button */
+.close:hover {
+  color: #142b57;
+}
+
+/* Iframe inside modal */
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

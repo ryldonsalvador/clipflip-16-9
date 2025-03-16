@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="ad.size" content="width=640,height=360" />
+    <title>Lightbox Modal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Banner Container (300x250) -->
+    <div class="banner">
+      <div class="logo">
+        <a href="javascript:window.open(window.clickTag);void(0)">
+          <img src="./img/volkswagen-logo.png" />
+        </a>
+      </div>
+      <!-- <div class="clipflip-play">
+        <img src="./img/clipflip-play.png" />
+      </div> -->
+      <div class="container" id="openModal">
+        <div class="video-player-holder">
+          <video
+            id="myvideo"
+            muted
+            loop
+            playsinline
+            autoplay
+            src="./videos/video1.mp4"
+          ></video>
+        </div>
+        <div class="play-btn">
+          <img src="./img/play-btn.png" />
+        </div>
+      </div>
+      <!-- <button id="openModal">Open Lightbox</button> -->
+      <!-- <div id="openModal" class="button">Explore</div> -->
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="modal">
+      <span class="close">&times;</span>
+      <div class="modal-content">
+        <iframe id="modalIframe" src="" frameborder="0"></iframe>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="text/javascript">
+      var clickTag = "https://www.google.com";
+    </script>
+  </body>
+</html>
